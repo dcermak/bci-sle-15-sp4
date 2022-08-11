@@ -1,0 +1,34 @@
+-------------------------------------------------------------------
+Tue Aug  9 09:57:20 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Set BuildVersion to 15.4
+
+-------------------------------------------------------------------
+Thu Jul 14 14:33:12 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- provide a symlink for gcc and set CC environment variable to point to it
+
+-------------------------------------------------------------------
+Wed Jul 13 12:27:59 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add environment variables CARGO_VERSION and RUST_VERSION via obs-service-replace_using_package_version
+
+-------------------------------------------------------------------
+Tue Jun 21 07:12:24 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Switch latest to Rust 1.61
+
+-------------------------------------------------------------------
+Fri Jun 17 13:00:07 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Set the release-stage label to released
+
+-------------------------------------------------------------------
+Tue May  3 09:24:19 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Use set -euo pipefail in every RUN command, use ; instead of && to prevent masking failures
+
+-------------------------------------------------------------------
+Wed Apr 27 07:41:45 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- First version of the Rust 1.60 container

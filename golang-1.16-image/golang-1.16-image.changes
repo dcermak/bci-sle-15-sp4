@@ -1,0 +1,75 @@
+-------------------------------------------------------------------
+Tue Aug  9 09:57:33 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Set BuildVersion to 15.4
+
+-------------------------------------------------------------------
+Fri Jun 17 13:00:16 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Set the release-stage label to released
+
+-------------------------------------------------------------------
+Tue May  3 09:24:25 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Use set -euo pipefail in every RUN command, use ; instead of && to prevent masking failures
+
+-------------------------------------------------------------------
+Thu Apr 28 09:54:29 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Increase disk constraints to 8GB
+
+-------------------------------------------------------------------
+Fri Apr 22 08:14:20 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- remove org.opencontainers.image.revision label
+- add git-core to the container image
+
+-------------------------------------------------------------------
+Wed Apr 20 14:13:15 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Ensure that the reference contains the %RELEASE%
+
+-------------------------------------------------------------------
+Tue Apr 19 11:29:29 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add GOPATH environment variable and fix GOLANG_VERSION (fixes bsc#1198386)
+
+-------------------------------------------------------------------
+Tue Apr 12 08:58:43 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add set -euo pipefail where applicable && Add the current git HEAD hash as the org.opencontainers.image.revision OCI label
+
+-------------------------------------------------------------------
+Tue Mar  8 07:33:32 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Shorten description (jsc#BCI-42), Switch from PREFIXEDLABEL to LABEL now that the label helper can handle this
+
+-------------------------------------------------------------------
+Fri Feb 25 14:50:32 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Switch from the techpreview label to supportlevel
+
+-------------------------------------------------------------------
+Tue Feb  8 16:01:59 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Update labels according to jsc#BCI-33
+
+-------------------------------------------------------------------
+Thu Jan 20 11:13:37 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add version-release tag && install make
+
+-------------------------------------------------------------------
+Tue Jan 11 16:26:27 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Cleanup /var/log
+
+-------------------------------------------------------------------
+Wed Dec 15 15:00:12 UTC 2021 - Dan Čermák <dcermak@suse.com>
+
+- Add _constraints to prevent ftbfs with workers with small / partitions
+
+-------------------------------------------------------------------
+Wed Dec  1 10:56:55 UTC 2021 - Dan Čermák <dcermak@suse.com>
+
+- First version of the golang 1.16 language stack container

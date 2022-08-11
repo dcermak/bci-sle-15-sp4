@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- OBS-Imagerepo: obsrepositories:/ -->
+<!-- OBS-ExcludeArch: i586 -->
+<!-- Need to use OBS-AddTag for this until https://github.com/OSInside/kiwi/issues/2045 is implemented -->
+<!-- OBS-AddTag: bci/bci-base:%OS_VERSION_ID_SP% bci/bci-base:%OS_VERSION_ID_SP%.%RELEASE% -->
+
+<image schemaversion="6.5" name="sles15-image" xmlns:suse_label_helper="com.suse.label_helper">
+  <description type="system">
+    <author>SUSE LINUX GmbH</author>
+    <contact>https://www.suse.com/</contact>
+    <specification>%OS_PRETTY_NAME% Base Container</specification>
+  </description>
+  <preferences>
+    <type image="docker">
+      <containerconfig
+        name="suse/sle15"
+        tag="%OS_VERSION_ID_SP%"
+        additionaltags="%OS_VERSION_ID_SP%.%RELEASE%"
+        maintainer="SUSE LINUX GmbH (https://www.suse.com/)">
+        <labels>
+          <suse_label_helper:add_prefix prefix="com.suse.sle.base">
+            <label name="org.opencontainers.image.title" value="%OS_PRETTY_NAME% Base Container Image"/>
+            <label name="org.opencontainers.image.description" value="Image for containers based on %OS_PRETTY_NAME%."/>
+            <label name="org.opencontainers.image.version" value="%OS_VERSION_ID_SP%.%RELEASE%"/>
+            <label name="org.opencontainers.image.created" value="%BUILDTIME%"/>
+            <label name="org.opencontainers.image.vendor" value="SUSE LLC"/>
+            <label name="org.opencontainers.image.url" value="https://www.suse.com/products/server/"/>
+            <label name="org.opencontainers.image.source" value="%SOURCEURL%"/>
+            <label name="org.opensuse.reference" value="registry.suse.com/suse/sle15:%OS_VERSION_ID_SP%.%RELEASE%"/>
+            <label name="org.openbuildservice.disturl" value="%DISTURL%"/>
+            <label name="com.suse.eula" value="sle-bci"/>
+            <label name="com.suse.release-stage" value="released"/>
+            <label name="com.suse.image-type" value="sle-bci"/>
+            <label name="com.suse.lifecycle-url" value="https://www.suse.com/lifecycle"/>
+            <label name="com.suse.supportlevel" value="l3"/>
+          </suse_label_helper:add_prefix>
+          <!-- This image is known as SLE base as well as BCI image and needs prefixed labels for both,
+               but the label helper only allows a single prefix. So just duplicate them. -->
+          <label name="com.suse.bci.base.title" value="%OS_PRETTY_NAME% Base Container Image"/>
+          <label name="com.suse.bci.base.description" value="Image for containers based on %OS_PRETTY_NAME%."/>
+          <label name="com.suse.bci.base.version" value="%OS_VERSION_ID_SP%.%RELEASE%"/>
+          <label name="com.suse.bci.base.created" value="%BUILDTIME%"/>
+          <label name="com.suse.bci.base.vendor" value="SUSE LLC"/>
+          <label name="com.suse.bci.base.url" value="https://www.suse.com/products/server/"/>
+          <label name="com.suse.bci.base.source" value="%SOURCEURL%"/>
+          <label name="com.suse.bci.base.reference" value="registry.suse.com/suse/sle15:%OS_VERSION_ID_SP%.%RELEASE%"/>
+          <label name="com.suse.bci.base.disturl" value="%DISTURL%"/>
+          <label name="com.suse.bci.base.eula" value="sle-bci"/>
+          <label name="com.suse.bci.base.release-stage" value="released"/>
+          <label name="com.suse.bci.base.image-type" value="sle-bci"/>
+          <label name="com.suse.bci.base.lifecycle-url" value="https://www.suse.com/lifecycle"/>
+          <label name="com.suse.bci.base.supportlevel" value="l3"/>
+        </labels>
+      </containerconfig>
+    </type>
+    <version>15.0.0</version>
+    <packagemanager>zypper</packagemanager>
+    <rpm-check-signatures>false</rpm-check-signatures>
+    <rpm-excludedocs>true</rpm-excludedocs>
+  </preferences>
+  <repository>
+    <source path="obsrepositories:/"/>
+  </repository>
+  <packages type="image">
+    <package name="ca-certificates"/>
+    <package name="ca-certificates-mozilla"/>
+    <package name="container-suseconnect"/>
+    <package name="coreutils"/>
+    <package name="curl"/>
+    <package name="suse-build-key"/>
+    <package name="timezone"/>
+    <package name="netcfg"/>
+    <package name="skelcd-EULA-bci"/>
+  </packages>
+  <packages type="bootstrap">
+    <package name="aaa_base"/>
+    <package name="cracklib-dict-small"/>
+    <package name="filesystem"/>
+    <package name="kubic-locale-archive"/>
+    <package name="patterns-base-fips"/>
+    <package name="rpm-ndb" replaces="rpm"/>
+    <package name="sles-release"/>
+    <package name="shadow"/>
+    <package name="zypper"/>
+  </packages>
+</image>

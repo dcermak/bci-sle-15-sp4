@@ -1,0 +1,35 @@
+-------------------------------------------------------------------
+Thu May 12 14:04:19 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Update Chart version to 0.2.6
+- Switch from GPLv2 to MIT licence
+
+-------------------------------------------------------------------
+Wed May 11 13:51:10 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Update chart to version 0.2.5
+- Update appVersion and version in chart
+- Fix issue with repo listing
+
+-------------------------------------------------------------------
+Thu Mar 31 08:52:37 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Update Chart to version 0.2.3
+- Add SDPX licence tag
+
+-------------------------------------------------------------------
+Wed Mar 30 10:09:24 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Update Chart to version 0.2.2
+- Target SLE15SP4 container images
+
+-------------------------------------------------------------------
+Tue Mar 22 08:24:10 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Update Chart to version 0.2.0
+- Update images URL in chart
+
+-------------------------------------------------------------------
+Wed Mar  2 13:55:28 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Initial release

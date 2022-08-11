@@ -1,0 +1,45 @@
+-------------------------------------------------------------------
+Wed Jul 13 12:27:38 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add environment variables CARGO_VERSION and RUST_VERSION via obs-service-replace_using_package_version
+
+-------------------------------------------------------------------
+Fri Jun 17 12:59:45 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Set the release-stage label to released
+
+-------------------------------------------------------------------
+Tue May  3 09:23:59 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Use set -euo pipefail in every RUN command, use ; instead of && to prevent masking failures
+
+-------------------------------------------------------------------
+Thu Apr 21 11:42:58 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- remove org.opencontainers.image.revision label
+- add _constraints ensuring enough disk space is available
+
+-------------------------------------------------------------------
+Wed Apr 20 14:12:48 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Ensure that the reference contains the %RELEASE%
+
+-------------------------------------------------------------------
+Tue Apr 12 08:58:18 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add set -euo pipefail where applicable && Add the current git HEAD hash as the org.opencontainers.image.revision OCI label
+
+-------------------------------------------------------------------
+Tue Mar  8 07:33:24 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Shorten description (jsc#BCI-42), Switch from PREFIXEDLABEL to LABEL now that the label helper can handle this
+
+-------------------------------------------------------------------
+Fri Feb 25 14:50:23 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Switch from the techpreview label to supportlevel
+
+-------------------------------------------------------------------
+Thu Jan 20 10:16:52 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- First version of the Rust 1.57 image

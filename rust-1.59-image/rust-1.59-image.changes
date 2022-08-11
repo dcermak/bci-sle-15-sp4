@@ -1,0 +1,45 @@
+-------------------------------------------------------------------
+Wed Jul 13 12:27:52 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add environment variables CARGO_VERSION and RUST_VERSION via obs-service-replace_using_package_version
+
+-------------------------------------------------------------------
+Fri Jun 17 13:00:00 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Set the release-stage label to released
+
+-------------------------------------------------------------------
+Tue May  3 09:24:12 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Use set -euo pipefail in every RUN command, use ; instead of && to prevent masking failures
+
+-------------------------------------------------------------------
+Wed Apr 27 08:11:35 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Remove latest tag, moved to Rust 1.60
+
+-------------------------------------------------------------------
+Thu Apr 21 11:43:16 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- remove org.opencontainers.image.revision label
+- add _constraints ensuring enough disk space is available
+
+-------------------------------------------------------------------
+Wed Apr 20 14:13:06 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Ensure that the reference contains the %RELEASE%
+
+-------------------------------------------------------------------
+Tue Apr 12 08:58:33 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Add set -euo pipefail where applicable && Add the current git HEAD hash as the org.opencontainers.image.revision OCI label
+
+-------------------------------------------------------------------
+Tue Apr  5 10:19:07 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Correct latest tag
+
+-------------------------------------------------------------------
+Fri Mar 25 08:42:47 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Initial version of the rust 1.59 Container, jsc#BCI-95
