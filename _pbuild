@@ -1,0 +1,15 @@
+<pbuild>
+  <preset name="sle15.4" arch="x86_64" obs="https://api.opensuse.org/public">
+    <config>sles15sp4</config>
+    <repo>obs://SUSE:SLE-15-SP4:Update/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP4:GA/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP3:Update/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP3:GA/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP2:Update/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP2:GA/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP1:Update/pool</repo>
+    <repo>obs://SUSE:SLE-15-SP1:GA/pool</repo>
+    <repo>obs://SUSE:SLE-15:Update/pool</repo>
+    <repo>obs://SUSE:SLE-15:GA/pool</repo>
+  </preset>
+</pbuild>
