@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
-#!BuildTag: suse/389-ds:2.0
+#!BuildTag: suse/389-ds:%%389ds_version%%
 #!BuildTag: suse/389-ds:latest
-#!BuildTag: suse/389-ds:2.0-%RELEASE%
+#!BuildTag: suse/389-ds:%%389ds_version%%-%RELEASE%
 #!BuildVersion: 15.4
 FROM suse/sle15:15.4
 
@@ -11,11 +11,11 @@ MAINTAINER wbrown@suse.de
 # labelprefix=com.suse.application.389-ds
 LABEL org.opencontainers.image.title="SLE 389 Directory Server Container Image"
 LABEL org.opencontainers.image.description="389 Directory Server based on the SLE Base Container Image."
-LABEL org.opencontainers.image.version="2.0"
+LABEL org.opencontainers.image.version="%%389ds_version%%"
 LABEL org.opencontainers.image.url="https://www.suse.com/products/server/"
 LABEL org.opencontainers.image.created="%BUILDTIME%"
 LABEL org.opencontainers.image.vendor="SUSE LLC"
-LABEL org.opensuse.reference="registry.suse.com/suse/389-ds:2.0-%RELEASE%"
+LABEL org.opensuse.reference="registry.suse.com/suse/389-ds:%%389ds_version%%-%RELEASE%"
 LABEL org.openbuildservice.disturl="%DISTURL%"
 LABEL com.suse.supportlevel="techpreview"
 LABEL com.suse.eula="sle-bci"

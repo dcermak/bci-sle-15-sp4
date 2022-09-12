@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: (LGPL-2.1+ AND GPL-2.0+)
-#!BuildTag: suse/pcp:5.2.2
+#!BuildTag: suse/pcp:%%pcp_patch%%
 #!BuildTag: suse/pcp:latest
-#!BuildTag: suse/pcp:5.2.2-%RELEASE%
-#!BuildTag: suse/pcp:5.2
-#!BuildTag: suse/pcp:5
+#!BuildTag: suse/pcp:%%pcp_patch%%-%RELEASE%
+#!BuildTag: suse/pcp:%%pcp_minor%%
+#!BuildTag: suse/pcp:%%pcp_major%%
 #!BuildVersion: 15.4
 FROM bci/bci-init:15.4
 
@@ -11,13 +11,13 @@ MAINTAINER SUSE LLC (https://www.suse.com/)
 
 # Define labels according to https://en.opensuse.org/Building_derived_containers
 # labelprefix=com.suse.application.pcp
-LABEL org.opencontainers.image.title="SLE Performance Co-Pilot (pcp) container Container Image"
+LABEL org.opencontainers.image.title="SLE Performance Co-Pilot (pcp) Container Image"
 LABEL org.opencontainers.image.description="Performance Co-Pilot (pcp) container image based on the SLE Base Container Image. This container image is not supported when using a container runtime other than podman."
-LABEL org.opencontainers.image.version="5.2.2"
+LABEL org.opencontainers.image.version="%%pcp_patch%%"
 LABEL org.opencontainers.image.url="https://www.suse.com/products/server/"
 LABEL org.opencontainers.image.created="%BUILDTIME%"
 LABEL org.opencontainers.image.vendor="SUSE LLC"
-LABEL org.opensuse.reference="registry.suse.com/suse/pcp:5.2.2-%RELEASE%"
+LABEL org.opensuse.reference="registry.suse.com/suse/pcp:%%pcp_patch%%-%RELEASE%"
 LABEL org.openbuildservice.disturl="%DISTURL%"
 LABEL com.suse.supportlevel="techpreview"
 LABEL com.suse.eula="sle-bci"

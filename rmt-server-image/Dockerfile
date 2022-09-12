@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
-#!BuildTag: suse/rmt-server:2.8
+#!BuildTag: suse/rmt-server:%%rmt_version%%
 #!BuildTag: suse/rmt-server:latest
-#!BuildTag: suse/rmt-server:2.8-%RELEASE%
+#!BuildTag: suse/rmt-server:%%rmt_version%%-%RELEASE%
 #!BuildVersion: 15.4
 FROM suse/sle15:15.4
 
@@ -11,11 +11,11 @@ MAINTAINER SUSE LLC (https://www.suse.com/)
 # labelprefix=com.suse.application.rmt-server
 LABEL org.opencontainers.image.title="SLE RMT Server Container Image"
 LABEL org.opencontainers.image.description="SUSE RMT Server based on the SLE Base Container Image."
-LABEL org.opencontainers.image.version="2.8"
+LABEL org.opencontainers.image.version="%%rmt_version%%"
 LABEL org.opencontainers.image.url="https://www.suse.com/products/server/"
 LABEL org.opencontainers.image.created="%BUILDTIME%"
 LABEL org.opencontainers.image.vendor="SUSE LLC"
-LABEL org.opensuse.reference="registry.suse.com/suse/rmt-server:2.8-%RELEASE%"
+LABEL org.opensuse.reference="registry.suse.com/suse/rmt-server:%%rmt_version%%-%RELEASE%"
 LABEL org.openbuildservice.disturl="%DISTURL%"
 LABEL com.suse.supportlevel="techpreview"
 LABEL com.suse.eula="sle-bci"

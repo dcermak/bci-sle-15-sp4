@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Thu Aug 11 09:36:44 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Switch latest to Rust 1.62
+
+-------------------------------------------------------------------
 Tue Aug  9 09:57:27 UTC 2022 - Dan Čermák <dcermak@suse.com>
 
 - Set BuildVersion to 15.4

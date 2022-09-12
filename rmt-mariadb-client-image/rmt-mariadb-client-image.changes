@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Fri Aug 19 10:36:56 UTC 2022 - Dan Čermák <dcermak@suse.com>
+
+- Use obs-service-replace_using_package_version for the container version
+
+-------------------------------------------------------------------
 Tue Aug  9 09:58:58 UTC 2022 - Dan Čermák <dcermak@suse.com>
 
 - Set BuildVersion to 15.4

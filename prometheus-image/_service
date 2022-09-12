@@ -3,9 +3,9 @@
   <service mode="buildtime" name="docker_label_helper"/>
 <service name="replace_using_package_version" mode="buildtime">
     <param name="file">Dockerfile</param>
-    <param name="regex">%%mariadb_version%%</param>
-    <param name="package">mariadb-client</param>
-    <param name="parse-version">minor</param>
+    <param name="regex">%%prometheus_version%%</param>
+    <param name="package">golang-github-prometheus-prometheus</param>
+    <param name="parse-version">patch</param>
   </service>
 
 </services>

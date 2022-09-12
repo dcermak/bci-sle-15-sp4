@@ -1,9 +1,10 @@
 <services>
   <service name="tar_scm" mode="disabled">
-    <param name="url">https://gitlab.suse.de/brunoleon/rmt-helm</param>
+    <param name="url">https://github.com/SUSE/helm-charts</param>
+    <param name="subdir">rmt-helm</param>
     <param name="scm">git</param>
     <param name="filename">rmt-helm</param>
-    <param name="revision">v0.2.6</param>
+    <param name="revision">v1.0.2</param>
     <param name="versionformat">@PARENT_TAG@</param>
     <param name="versionrewrite-pattern">v(.*)</param>
   </service>

@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Aug 24 10:04:53 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
+
+- Update Chart version to 1.0.2
+- Add latest tag to the Chart
+- Switch from gitlab to github for source
+- RMT updated from 2.7.1 to 2.8.0
+
+-------------------------------------------------------------------
 Thu May 12 14:04:19 UTC 2022 - Bruno Leon <bruno.leon@suse.com>
 
 - Update Chart version to 0.2.6

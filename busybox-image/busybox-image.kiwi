@@ -8,7 +8,7 @@
   <description type="system">
     <author>SUSE LLC</author>
     <contact>https://www.suse.com/</contact>
-    <specification>SLE BCI %OS_VERSION% Busybox Container Image</specification>
+    <specification>SLE BCI %OS_VERSION_NO_DASH% Busybox Container Image</specification>
   </description>
   <preferences>
     <type image="docker">
@@ -20,7 +20,7 @@
         <labels>
           <!-- See https://en.opensuse.org/Building_derived_containers#Labels -->
           <suse_label_helper:add_prefix prefix="com.suse.bci.busybox">
-            <label name="org.opencontainers.image.title" value="SLE BCI %OS_VERSION% Busybox Container Image"/>
+            <label name="org.opencontainers.image.title" value="SLE BCI %OS_VERSION_NO_DASH% Busybox Container Image"/>
             <label name="org.opencontainers.image.description" value="Busybox based on the SLE Base Container Image."/>
             <label name="org.opencontainers.image.version" value="%OS_VERSION_ID_SP%.%RELEASE%"/>
             <label name="org.opencontainers.image.created" value="%BUILDTIME%"/>

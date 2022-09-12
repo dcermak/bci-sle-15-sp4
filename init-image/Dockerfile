@@ -9,7 +9,7 @@ MAINTAINER SUSE LLC (https://www.suse.com/)
 
 # Define labels according to https://en.opensuse.org/Building_derived_containers
 # labelprefix=com.suse.bci.init
-LABEL org.opencontainers.image.title="SLE BCI %OS_VERSION% Init Container Image"
+LABEL org.opencontainers.image.title="SLE BCI %OS_VERSION_NO_DASH% Init Container Image"
 LABEL org.opencontainers.image.description="Systemd environment for containers based on the SLE Base Container Image. This container is not supported when using container runtime other than podman."
 LABEL org.opencontainers.image.version="%OS_VERSION_ID_SP%.%RELEASE%"
 LABEL org.opencontainers.image.url="https://www.suse.com/products/server/"
@@ -27,7 +27,9 @@ LABEL usage="This container should only be used to build containers for daemons.
 
 RUN set -euo pipefail; zypper -n in --no-recommends systemd gzip; zypper -n clean; rm -rf /var/log/*
 
-
+HEALTHCHECK --interval=5s --timeout=5s --retries=5 \
+    CMD ["/usr/bin/systemctl", "is-active", "multi-user.target"]
 
 CMD ["/usr/lib/systemd/systemd"]
+RUN systemctl disable getty@tty1.service
 HEALTHCHECK --interval=5s --timeout=5s --retries=5     CMD ["/usr/bin/systemctl", "is-active", "multi-user.target"]
